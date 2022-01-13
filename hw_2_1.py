@@ -42,7 +42,11 @@ for i in range(0, data['pages']):
         # разделяем заработную плату по параметрам "от", "до", "валюта", если указаны
         if salary:
             salary_from = salary['from']
+            if salary_from:
+                salary_from = float(salary_from)
             salary_to = salary['to']
+            if salary_to:
+                salary_to = float(salary_to)
             currency = salary['currency']
         else:
             salary_from = None
@@ -53,3 +57,4 @@ for i in range(0, data['pages']):
         dict_number += 1
 
     print("=" * 80)
+
