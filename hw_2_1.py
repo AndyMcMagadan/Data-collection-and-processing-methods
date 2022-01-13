@@ -16,7 +16,7 @@ param = {
 response = requests.get(url, param)
 data = response.json()
 
-# Создаем пустой List (данные) и счетчик для страниц
+# Создаем пустой List (данные) с заголовками и счетчик для страниц
 list_data = [['id vacancy', 'name vacancy', 'area name', 'salary from', 'salary to', 'currency']]
 dict_number = 0
 
